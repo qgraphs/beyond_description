@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iconicity, overall and by word class — Beyond Description</title>
+<meta name="description" content="Interactive results from the EADH 2026 study of iconicity and sensorimotor grounding in museum audio description.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--ground:#f4f6f7;--panel:#fff;--ink:#14181d;--ink-2:#414a55;--dim:#6d7783;
+ --rule:#dde2e6;--rule-2:#eef1f3;--accent:#27536f;--accent-soft:#e6eef3;
+ --amber:#EBA000;--ok:#2f6b4f;--bad:#8c4a3f;--ok-rgb:47 107 79;--bad-rgb:140 74 63;
+ --serif:"Newsreader",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+ --ground:#12161a;--panel:#1a1f25;--ink:#e8ecef;--ink-2:#b9c2cb;--dim:#8593a0;
+ --rule:#2b333b;--rule-2:#222930;--accent:#7db4d8;--accent-soft:#1c2a34;
+ --ok:#6cc094;--bad:#dd8a7c;--ok-rgb:108 192 148;--bad-rgb:221 138 124}}
+:root[data-theme=dark]{--ground:#12161a;--panel:#1a1f25;--ink:#e8ecef;
+ --ink-2:#b9c2cb;--dim:#8593a0;--rule:#2b333b;--rule-2:#222930;--accent:#7db4d8;
+ --accent-soft:#1c2a34;--ok:#6cc094;--bad:#dd8a7c;--ok-rgb:108 192 148;--bad-rgb:221 138 124}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--serif);
+ font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:58rem;margin:0 auto;padding:0 20px;padding-block:clamp(26px,5vw,56px)}
+.rule{height:5px;width:88px;background:var(--amber);border-radius:2px;margin-bottom:22px}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;margin:0 0 .3em}
+.blurb{color:var(--ink-2);margin:0 0 1.6em;max-width:44rem}
+.gwrap{overflow-x:auto;background:var(--panel);border:1px solid var(--rule);
+ border-radius:5px;padding:4px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+thead th{font-family:var(--mono);font-size:.64rem;letter-spacing:.07em;
+ text-transform:uppercase;color:var(--dim);font-weight:500;padding:9px 8px;
+ border-bottom:1px solid var(--rule);text-align:center;white-space:nowrap}
+thead th:first-child{text-align:left}
+tbody th{font-weight:400;text-align:left;padding:5px 10px;white-space:nowrap;
+ font-size:.92rem;border-bottom:1px solid var(--rule-2)}
+td{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;
+ padding:5px 9px;border-bottom:1px solid var(--rule-2);font-size:.8rem;
+ white-space:nowrap;cursor:pointer;position:relative}
+td.ns{color:var(--dim)}
+td:hover,td:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+sup{color:var(--accent);font-size:.68em;vertical-align:.34em}
+.legend{font-family:var(--mono);font-size:.7rem;color:var(--dim);margin-top:.9em;
+ display:flex;flex-wrap:wrap;gap:.4em 1.6em}
+.hint{background:var(--accent-soft);border-left:3px solid var(--accent);
+ border-radius:3px;padding:.75em 1em;margin:1.5em 0;font-size:.92rem;color:var(--ink-2)}
+.hint b{color:var(--ink)}
+nav{margin-top:2.6em;padding-top:1.2em;border-top:1px solid var(--rule);
+ display:flex;flex-wrap:wrap;gap:1.4em;font-family:var(--mono);font-size:.78rem}
+nav a{color:var(--accent);text-decoration:none}
+nav a:hover{text-decoration:underline}
+nav a[aria-current]{color:var(--dim);pointer-events:none}
+footer{margin-top:1.6em;font-family:var(--mono);font-size:.7rem;color:var(--dim);
+ line-height:1.6}
+#wpop{position:fixed;z-index:60;max-width:330px;background:var(--panel);
+ border:1px solid var(--rule);border-radius:5px;padding:10px 12px 11px;
+ box-shadow:0 8px 30px -10px rgba(0,0,0,.3),0 1px 3px rgba(0,0,0,.1);
+ font-family:var(--mono);font-size:11.5px;opacity:0;pointer-events:none;
+ transition:opacity .12s ease}
+#wpop.on{opacity:1;pointer-events:auto}
+#wpop h4{margin:0 0 .55em;font-family:var(--serif);font-size:13.5px;font-weight:600;
+ display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+#wpop .pdev{font-family:var(--mono);font-size:11px;color:var(--accent)}
+#wpop .pns{font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;
+ text-transform:uppercase;color:var(--dim)}
+#wpop .wrow{display:grid;grid-template-columns:1fr 46px 34px;gap:0 7px;
+ align-items:center;padding:1.5px 0}
+#wpop .wname{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#wpop .wbar{height:7px;border-radius:1px;justify-self:stretch}
+#wpop .wnum{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:10.5px}
+#wpop .wst{text-align:right;font-size:9.5px;color:var(--dim)}
+#wpop .phint{margin:.6em 0 0;padding-top:.5em;border-top:1px solid var(--rule-2);
+ font-size:9.5px;color:var(--dim);line-height:1.45}
+@media (max-width:560px){body{font-size:16px}#wpop{max-width:min(330px,92vw)}}
+</style></head><body>
+<div class="wrap">
+<div class="rule"></div>
+<h1>Iconicity, overall and by word class</h1>
+<p class="blurb">How far each movement's vocabulary sits from the corpus mean on the Winter iconicity norms — overall, and within each part of speech.</p>
+<div class="hint"><b>Hover any cell</b> to see the words that produce it —
+click to pin, Escape to close. The list is direction-aware: a cell above the
+corpus mean shows the words pushing it up, a cell below shows those pushing it
+down.</div>
+<div class="gwrap"><table>
+<thead><tr><th>Movement</th><th>overall</th><th>NOUN</th><th>VERB</th><th>ADJ</th><th>ADV</th></tr></thead>
+<tbody><tr><th scope="row">Impressionism</th><td class="ns" tabindex="0" data-k="icon|icon|Impressionism" style="background:rgb(var(--ok-rgb) / 0.08)">+0.007<sup></sup></td><td class="ns" tabindex="0" data-k="icon|NOUN|Impressionism" style="background:rgb(var(--bad-rgb) / 0.01)">-0.002<sup></sup></td><td class="" tabindex="0" data-k="icon|VERB|Impressionism" style="background:rgb(var(--ok-rgb) / 0.37)">+0.024<sup>*</sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Impressionism" style="background:rgb(var(--ok-rgb) / 0.15)">+0.011<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Impressionism" style="background:rgb(var(--ok-rgb) / 0.17)">+0.026<sup></sup></td></tr><tr><th scope="row">Postimpressionism</th><td class="ns" tabindex="0" data-k="icon|icon|Postimpressionism" style="background:rgb(var(--ok-rgb) / 0.13)">+0.011<sup></sup></td><td class="ns" tabindex="0" data-k="icon|NOUN|Postimpressionism" style="background:rgb(var(--ok-rgb) / 0.09)">+0.010<sup></sup></td><td class="ns" tabindex="0" data-k="icon|VERB|Postimpressionism" style="background:rgb(var(--ok-rgb) / 0.05)">+0.010<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Postimpressionism" style="background:rgb(var(--ok-rgb) / 0.19)">+0.013<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Postimpressionism" style="background:rgb(var(--ok-rgb) / 0.17)">+0.026<sup></sup></td></tr><tr><th scope="row">Expressionism</th><td class="ns" tabindex="0" data-k="icon|icon|Expressionism" style="background:rgb(var(--ok-rgb) / 0.02)">+0.001<sup></sup></td><td class="ns" tabindex="0" data-k="icon|NOUN|Expressionism" style="background:rgb(var(--ok-rgb) / 0.04)">+0.004<sup></sup></td><td class="ns" tabindex="0" data-k="icon|VERB|Expressionism" style="background:rgb(var(--bad-rgb) / 0.02)">-0.003<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Expressionism" style="background:rgb(var(--bad-rgb) / 0.04)">-0.003<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Expressionism" style="background:rgb(var(--bad-rgb) / 0.03)">-0.005<sup></sup></td></tr><tr><th scope="row">Cubism</th><td class="ns" tabindex="0" data-k="icon|icon|Cubism" style="background:rgb(var(--bad-rgb) / 0.19)">-0.016<sup></sup></td><td class="" tabindex="0" data-k="icon|NOUN|Cubism" style="background:rgb(var(--bad-rgb) / 0.55)">-0.021<sup>*</sup></td><td class="ns" tabindex="0" data-k="icon|VERB|Cubism" style="background:rgb(var(--bad-rgb) / 0.04)">-0.008<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Cubism" style="background:rgb(var(--bad-rgb) / 0.07)">-0.005<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Cubism" style="background:rgb(var(--bad-rgb) / 0.09)">-0.014<sup></sup></td></tr><tr><th scope="row">Surrealism</th><td class="ns" tabindex="0" data-k="icon|icon|Surrealism" style="background:rgb(var(--ok-rgb) / 0.03)">+0.003<sup></sup></td><td class="ns" tabindex="0" data-k="icon|NOUN|Surrealism" style="background:rgb(var(--ok-rgb) / 0.02)">+0.003<sup></sup></td><td class="ns" tabindex="0" data-k="icon|VERB|Surrealism" style="background:rgb(var(--ok-rgb) / 0.04)">+0.008<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Surrealism" style="background:rgb(var(--ok-rgb) / 0.04)">+0.003<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Surrealism" style="background:rgb(var(--ok-rgb) / 0.11)">+0.018<sup></sup></td></tr><tr><th scope="row">Abstraction, geometric</th><td class="ns" tabindex="0" data-k="icon|icon|Abstraction (geometric)" style="background:rgb(var(--bad-rgb) / 0.19)">-0.017<sup></sup></td><td class="ns" tabindex="0" data-k="icon|NOUN|Abstraction (geometric)" style="background:rgb(var(--bad-rgb) / 0.13)">-0.014<sup></sup></td><td class="" tabindex="0" data-k="icon|VERB|Abstraction (geometric)" style="background:rgb(var(--bad-rgb) / 0.55)">-0.036<sup>***</sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Abstraction (geometric)" style="background:rgb(var(--bad-rgb) / 0.18)">-0.012<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Abstraction (geometric)" style="background:rgb(var(--bad-rgb) / 0.14)">-0.021<sup></sup></td></tr><tr><th scope="row">Abstraction, non-geometric</th><td class="ns" tabindex="0" data-k="icon|icon|Abstraction (non-geometric)" style="background:rgb(var(--ok-rgb) / 0.12)">+0.010<sup></sup></td><td class="" tabindex="0" data-k="icon|NOUN|Abstraction (non-geometric)" style="background:rgb(var(--ok-rgb) / 0.54)">+0.020<sup>**</sup></td><td class="ns" tabindex="0" data-k="icon|VERB|Abstraction (non-geometric)" style="background:rgb(var(--ok-rgb) / 0.03)">+0.005<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADJ|Abstraction (non-geometric)" style="background:rgb(var(--bad-rgb) / 0.10)">-0.007<sup></sup></td><td class="ns" tabindex="0" data-k="icon|ADV|Abstraction (non-geometric)" style="background:rgb(var(--bad-rgb) / 0.19)">-0.029<sup></sup></td></tr></tbody></table></div>
+<div class="legend"><span>deviation from the corpus mean, percentile points</span>
+<span>* p&lt;.05 &nbsp; ** p&lt;.01 &nbsp; *** p&lt;.001, FDR-corrected</span>
+<span>faded = not significant</span></div>
+<nav><a href="index.html">overview</a><a href="lancaster.html">Lancaster</a><a href="binder.html">Binder</a><a href="iconicity.html" aria-current="page">Iconicity</a></nav>
+<footer>404 English museum audio descriptions · 7 movements · mixed-effects models
+with description, painter and institution as random effects.<br>
+Word-level shares are the regression's implied weights aggregated by lemma
+(Chattopadhyay &amp; Zubizarreta 2023), and sum to the fitted deviation exactly.<br>
+Pindur &amp; Hołobut · EADH 2026 · Reverberations, National Science Centre Poland
+2024/53/B/HS2/04292</footer>
+</div>
+<div id="wpop" role="tooltip" aria-live="polite"></div>
+<script id="worddata" type="application/json">{"icon|icon|Impressionism":{"dev":0.0066,"sig":false,"words":[{"w":"shape","c":0.00439,"n":27,"s":null},{"w":"abstract","c":0.00129,"n":5,"s":null},{"w":"look","c":0.00126,"n":67,"s":null},{"w":"area","c":0.00106,"n":22,"s":null},{"w":"like","c":0.00093,"n":8,"s":null},{"w":"pale","c":0.00092,"n":87,"s":null},{"w":"high","c":0.00087,"n":42,"s":null},{"w":"long","c":0.00086,"n":64,"s":null},{"w":"woman","c":0.00078,"n":101,"s":null}]},"icon|NOUN|Impressionism":{"dev":-0.0016,"sig":false,"words":[{"w":"line","c":-0.0057,"n":25,"s":null},{"w":"tree","c":-0.00248,"n":77,"s":null},{"w":"form","c":-0.00184,"n":12,"s":null},{"w":"work","c":-0.00182,"n":25,"s":null},{"w":"dress","c":-0.00144,"n":33,"s":null},{"w":"leave","c":-0.00139,"n":24,"s":null},{"w":"paint","c":-0.00128,"n":35,"s":null},{"w":"corner","c":-0.00123,"n":68,"s":null},{"w":"edge","c":-0.001,"n":69,"s":null}]},"icon|VERB|Impressionism":{"dev":0.0241,"sig":true,"words":[{"w":"look","c":0.00553,"n":65,"s":null},{"w":"paint","c":0.00471,"n":190,"s":null},{"w":"shape","c":0.00343,"n":3,"s":null},{"w":"stand","c":0.00286,"n":60,"s":null},{"w":"hold","c":0.00245,"n":40,"s":null},{"w":"pull","c":0.00226,"n":20,"s":null},{"w":"angle","c":0.00161,"n":17,"s":null},{"w":"lean","c":0.0015,"n":19,"s":null},{"w":"hang","c":0.0014,"n":21,"s":null}]},"icon|ADJ|Impressionism":{"dev":0.0105,"sig":false,"words":[{"w":"pale","c":0.00406,"n":87,"s":null},{"w":"abstract","c":0.00333,"n":3,"s":null},{"w":"blue","c":0.00259,"n":156,"s":null},{"w":"like","c":0.00251,"n":8,"s":null},{"w":"long","c":0.00246,"n":53,"s":null},{"w":"black","c":0.00241,"n":76,"s":null},{"w":"loose","c":0.00195,"n":24,"s":null},{"w":"low","c":0.00149,"n":79,"s":null},{"w":"dark","c":0.00126,"n":102,"s":null}]},"icon|ADV|Impressionism":{"dev":0.026,"sig":false,"words":[{"w":"nearly","c":0.01663,"n":25,"s":null},{"w":"long","c":0.01204,"n":11,"s":null},{"w":"far","c":0.00689,"n":14,"s":null},{"w":"right","c":0.00606,"n":5,"s":null},{"w":"finally","c":0.00353,"n":3,"s":null},{"w":"upward","c":0.00256,"n":4,"s":null},{"w":"high","c":0.00224,"n":4,"s":null},{"w":"close","c":0.00185,"n":21,"s":null},{"w":"left","c":0.00083,"n":3,"s":null}]},"icon|icon|Postimpressionism":{"dev":0.0112,"sig":false,"words":[{"w":"shape","c":0.00382,"n":12,"s":null},{"w":"black","c":0.0013,"n":45,"s":null},{"w":"center","c":0.00094,"n":14,"s":null},{"w":"stroke","c":0.00088,"n":41,"s":null},{"w":"woman","c":0.00087,"n":65,"s":null},{"w":"dot","c":0.00087,"n":25,"s":null},{"w":"blue","c":0.0008,"n":126,"s":null},{"w":"like","c":0.00078,"n":5,"s":null},{"w":"swirl","c":0.00077,"n":16,"s":null}]},"icon|NOUN|Postimpressionism":{"dev":0.0099,"sig":false,"words":[{"w":"shape","c":0.00583,"n":10,"s":null},{"w":"sky","c":0.00191,"n":51,"s":null},{"w":"woman","c":0.00183,"n":65,"s":null},{"w":"stroke","c":0.00159,"n":41,"s":null},{"w":"center","c":0.00144,"n":14,"s":null},{"w":"corner","c":0.00117,"n":53,"s":null},{"w":"lip","c":0.00111,"n":18,"s":null},{"w":"dash","c":0.00104,"n":10,"s":null},{"w":"dot","c":0.00099,"n":16,"s":null}]},"icon|VERB|Postimpressionism":{"dev":0.0101,"sig":false,"words":[{"w":"stand","c":0.00267,"n":42,"s":null},{"w":"swirl","c":0.00226,"n":10,"s":null},{"w":"dot","c":0.00198,"n":9,"s":null},{"w":"look","c":0.00157,"n":34,"s":null},{"w":"lean","c":0.00155,"n":13,"s":null},{"w":"take","c":0.00147,"n":3,"s":null},{"w":"paint","c":0.0014,"n":90,"s":null},{"w":"blend","c":0.00136,"n":11,"s":null},{"w":"twist","c":0.00096,"n":5,"s":null}]},"icon|ADJ|Postimpressionism":{"dev":0.0131,"sig":false,"words":[{"w":"black","c":0.00455,"n":38,"s":null},{"w":"like","c":0.00243,"n":5,"s":null},{"w":"bright","c":0.0021,"n":31,"s":null},{"w":"blue","c":0.00199,"n":89,"s":null},{"w":"low","c":0.00198,"n":50,"s":null},{"w":"short","c":0.00171,"n":27,"s":null},{"w":"upper","c":0.00145,"n":27,"s":null},{"w":"vivid","c":0.00144,"n":11,"s":null},{"w":"pale","c":0.00134,"n":35,"s":null}]},"icon|ADV|Postimpressionism":{"dev":0.0264,"sig":false,"words":[{"w":"high","c":0.02083,"n":6,"s":null},{"w":"far","c":0.0101,"n":8,"s":null},{"w":"long","c":0.00876,"n":5,"s":null},{"w":"simply","c":0.00084,"n":3,"s":null},{"w":"close","c":0.0002,"n":7,"s":null},{"w":"forward","c":0.00015,"n":9,"s":null},{"w":"away","c":-0.00166,"n":8,"s":null},{"w":"entirely","c":-0.00247,"n":3,"s":null},{"w":"particularly","c":-0.00341,"n":3,"s":null}]},"icon|icon|Expressionism":{"dev":0.0013,"sig":false,"words":[{"w":"shape","c":0.00285,"n":30,"s":null},{"w":"woman","c":0.00148,"n":127,"s":null},{"w":"arm","c":0.0011,"n":52,"s":null},{"w":"long","c":0.00099,"n":50,"s":null},{"w":"rectangle","c":0.00088,"n":5,"s":null},{"w":"color","c":0.00083,"n":46,"s":null},{"w":"eye","c":0.00083,"n":44,"s":null},{"w":"thick","c":0.00081,"n":27,"s":null},{"w":"line","c":0.00075,"n":69,"s":null}]},"icon|NOUN|Expressionism":{"dev":0.0038,"sig":false,"words":[{"w":"shape","c":0.00448,"n":25,"s":null},{"w":"woman","c":0.00349,"n":127,"s":null},{"w":"arm","c":0.00215,"n":52,"s":null},{"w":"rectangle","c":0.00188,"n":5,"s":null},{"w":"eye","c":0.00151,"n":44,"s":null},{"w":"color","c":0.00128,"n":40,"s":null},{"w":"surface","c":0.00125,"n":8,"s":null},{"w":"area","c":0.00113,"n":19,"s":null},{"w":"body","c":0.00108,"n":40,"s":null}]},"icon|VERB|Expressionism":{"dev":-0.0029,"sig":false,"words":[{"w":"outline","c":-0.00256,"n":29,"s":null},{"w":"take","c":-0.00186,"n":21,"s":null},{"w":"render","c":-0.00178,"n":22,"s":null},{"w":"leave","c":-0.00133,"n":36,"s":null},{"w":"float","c":-0.001,"n":6,"s":null},{"w":"wear","c":-0.00089,"n":39,"s":null},{"w":"curve","c":-0.00082,"n":4,"s":null},{"w":"dress","c":-0.0008,"n":11,"s":null},{"w":"carry","c":-0.00079,"n":7,"s":null}]},"icon|ADJ|Expressionism":{"dev":-0.0028,"sig":false,"words":[{"w":"low","c":-0.00203,"n":28,"s":null},{"w":"young","c":-0.00197,"n":25,"s":null},{"w":"left","c":-0.00166,"n":95,"s":null},{"w":"early","c":-0.00148,"n":15,"s":null},{"w":"single","c":-0.00125,"n":13,"s":null},{"w":"upper","c":-0.00121,"n":19,"s":null},{"w":"black","c":-0.00121,"n":94,"s":null},{"w":"vibrant","c":-0.00114,"n":3,"s":null},{"w":"right","c":-0.00114,"n":84,"s":null}]},"icon|ADV|Expressionism":{"dev":-0.0047,"sig":false,"words":[{"w":"nearly","c":-0.02012,"n":5,"s":null},{"w":"later","c":-0.01684,"n":12,"s":null},{"w":"soon","c":-0.00597,"n":4,"s":null},{"w":"aside","c":-0.00401,"n":3,"s":null},{"w":"generally","c":-0.00368,"n":3,"s":null},{"w":"barely","c":-0.00359,"n":4,"s":null},{"w":"early","c":-0.00297,"n":3,"s":null},{"w":"right","c":-0.00287,"n":11,"s":null},{"w":"possibly","c":-0.00279,"n":5,"s":null}]},"icon|icon|Cubism":{"dev":-0.016,"sig":false,"words":[{"w":"shape","c":-0.00363,"n":115,"s":null},{"w":"figure","c":-0.00166,"n":74,"s":null},{"w":"represent","c":-0.00116,"n":22,"s":null},{"w":"color","c":-0.00084,"n":92,"s":null},{"w":"center","c":-0.00084,"n":41,"s":null},{"w":"object","c":-0.00082,"n":26,"s":null},{"w":"long","c":-0.00072,"n":16,"s":null},{"w":"neck","c":-0.0007,"n":21,"s":null},{"w":"high","c":-0.00067,"n":21,"s":null}]},"icon|NOUN|Cubism":{"dev":-0.0207,"sig":true,"words":[{"w":"shape","c":-0.00651,"n":108,"s":null},{"w":"figure","c":-0.00278,"n":74,"s":null},{"w":"color","c":-0.00194,"n":87,"s":null},{"w":"neck","c":-0.00128,"n":21,"s":null},{"w":"center","c":-0.00127,"n":40,"s":null},{"w":"stroke","c":-0.00124,"n":7,"s":null},{"w":"edge","c":-0.00119,"n":31,"s":null},{"w":"line","c":-0.00111,"n":54,"s":null},{"w":"object","c":-0.00111,"n":24,"s":null}]},"icon|VERB|Cubism":{"dev":-0.0081,"sig":false,"words":[{"w":"represent","c":-0.00521,"n":22,"s":null},{"w":"suggest","c":-0.00204,"n":23,"s":null},{"w":"indicate","c":-0.00202,"n":13,"s":null},{"w":"give","c":-0.00168,"n":14,"s":null},{"w":"paint","c":-0.00147,"n":51,"s":null},{"w":"vary","c":-0.00101,"n":7,"s":null},{"w":"stand","c":-0.00095,"n":17,"s":null},{"w":"cut","c":-0.00095,"n":5,"s":null},{"w":"remain","c":-0.00091,"n":9,"s":null}]},"icon|ADJ|Cubism":{"dev":-0.0046,"sig":false,"words":[{"w":"different","c":-0.00184,"n":13,"s":null},{"w":"pale","c":-0.00152,"n":11,"s":null},{"w":"black","c":-0.00152,"n":63,"s":null},{"w":"long","c":-0.00148,"n":15,"s":null},{"w":"bright","c":-0.00139,"n":10,"s":null},{"w":"abstract","c":-0.00138,"n":21,"s":null},{"w":"blue","c":-0.00136,"n":44,"s":null},{"w":"abstracted","c":-0.00136,"n":5,"s":null},{"w":"thin","c":-0.00118,"n":9,"s":null}]},"icon|ADV|Cubism":{"dev":-0.0145,"sig":false,"words":[{"w":"instead","c":-0.01526,"n":5,"s":null},{"w":"nearly","c":-0.0144,"n":4,"s":null},{"w":"particularly","c":-0.00347,"n":3,"s":null},{"w":"maybe","c":-0.00291,"n":3,"s":null},{"w":"perfectly","c":-0.00212,"n":3,"s":null},{"w":"right","c":-0.00158,"n":5,"s":null},{"w":"downward","c":-0.00126,"n":4,"s":null},{"w":"apart","c":-0.00078,"n":3,"s":null},{"w":"close","c":-0.00072,"n":5,"s":null}]},"icon|icon|Surrealism":{"dev":0.0029,"sig":false,"words":[{"w":"rectangle","c":0.0017,"n":3,"s":null},{"w":"zone","c":0.0013,"n":20,"s":null},{"w":"white","c":0.00118,"n":80,"s":null},{"w":"sky","c":0.00103,"n":50,"s":null},{"w":"float","c":0.00085,"n":24,"s":null},{"w":"skull","c":0.00078,"n":25,"s":null},{"w":"line","c":0.00074,"n":78,"s":null},{"w":"eye","c":0.00064,"n":41,"s":null},{"w":"dress","c":0.00056,"n":3,"s":null}]},"icon|NOUN|Surrealism":{"dev":0.0025,"sig":false,"words":[{"w":"rectangle","c":0.00276,"n":3,"s":null},{"w":"zone","c":0.00202,"n":20,"s":null},{"w":"sky","c":0.00181,"n":50,"s":null},{"w":"skull","c":0.00137,"n":25,"s":null},{"w":"color","c":0.00131,"n":26,"s":null},{"w":"eye","c":0.00131,"n":41,"s":null},{"w":"cloud","c":0.0009,"n":21,"s":null},{"w":"plant","c":0.00076,"n":16,"s":null},{"w":"grass","c":0.0006,"n":21,"s":null}]},"icon|VERB|Surrealism":{"dev":0.0077,"sig":false,"words":[{"w":"leave","c":0.00285,"n":10,"s":null},{"w":"float","c":0.00283,"n":22,"s":null},{"w":"create","c":0.0019,"n":14,"s":null},{"w":"point","c":0.00172,"n":12,"s":null},{"w":"suggest","c":0.00141,"n":15,"s":null},{"w":"emerge","c":0.00133,"n":10,"s":null},{"w":"represent","c":0.00113,"n":5,"s":null},{"w":"stretch","c":0.00102,"n":22,"s":null},{"w":"wrap","c":0.00091,"n":12,"s":null}]},"icon|ADJ|Surrealism":{"dev":0.0028,"sig":false,"words":[{"w":"white","c":0.00313,"n":77,"s":null},{"w":"long","c":0.00186,"n":35,"s":null},{"w":"tiny","c":0.00181,"n":16,"s":null},{"w":"right","c":0.00148,"n":53,"s":null},{"w":"realistic","c":0.0013,"n":11,"s":null},{"w":"left","c":0.00124,"n":58,"s":null},{"w":"high","c":0.00122,"n":31,"s":null},{"w":"wavy","c":0.0011,"n":8,"s":null},{"w":"abstract","c":0.00097,"n":13,"s":null}]},"icon|ADV|Surrealism":{"dev":0.0176,"sig":false,"words":[{"w":"far","c":0.00509,"n":10,"s":null},{"w":"straight","c":0.00477,"n":7,"s":null},{"w":"right","c":0.00462,"n":4,"s":null},{"w":"ahead","c":0.00279,"n":5,"s":null},{"w":"forward","c":5e-05,"n":9,"s":null},{"w":"downward","c":-0.00048,"n":4,"s":null},{"w":"upright","c":-0.00054,"n":3,"s":null},{"w":"close","c":-0.00064,"n":8,"s":null},{"w":"nearly","c":-0.00071,"n":12,"s":null}]},"icon|icon|Abstraction (geometric)":{"dev":-0.0166,"sig":false,"words":[{"w":"shape","c":-0.00464,"n":97,"s":1.0},{"w":"rectangle","c":-0.00447,"n":85,"s":1.0},{"w":"white","c":-0.00165,"n":95,"s":0.92},{"w":"area","c":-0.00097,"n":27,"s":0.94},{"w":"panel","c":-0.00084,"n":70,"s":0.99},{"w":"black","c":-0.00084,"n":72,"s":0.92},{"w":"abstract","c":-0.00081,"n":27,"s":0.95},{"w":"square","c":-0.00081,"n":52,"s":1.0},{"w":"field","c":-0.00079,"n":12,"s":0.95}]},"icon|NOUN|Abstraction (geometric)":{"dev":-0.0144,"sig":false,"words":[{"w":"rectangle","c":-0.00846,"n":83,"s":1.0},{"w":"shape","c":-0.00758,"n":90,"s":1.0},{"w":"panel","c":-0.00162,"n":70,"s":0.99},{"w":"area","c":-0.00153,"n":27,"s":0.94},{"w":"stroke","c":-0.0013,"n":5,"s":0.96},{"w":"arm","c":-0.00128,"n":4,"s":0.95},{"w":"eye","c":-0.00127,"n":6,"s":0.91},{"w":"document","c":-0.00124,"n":16,"s":0.76},{"w":"color","c":-0.00116,"n":62,"s":null}]},"icon|VERB|Abstraction (geometric)":{"dev":-0.0362,"sig":true,"words":[{"w":"stand","c":-0.00336,"n":4,"s":1.0},{"w":"look","c":-0.00319,"n":14,"s":null},{"w":"separate","c":-0.00242,"n":11,"s":0.99},{"w":"include","c":-0.00241,"n":20,"s":null},{"w":"place","c":-0.00229,"n":14,"s":null},{"w":"title","c":-0.00211,"n":13,"s":0.99},{"w":"say","c":-0.00172,"n":11,"s":null},{"w":"compose","c":-0.00167,"n":9,"s":null},{"w":"shape","c":-0.00161,"n":7,"s":1.0}]},"icon|ADJ|Abstraction (geometric)":{"dev":-0.012,"sig":false,"words":[{"w":"white","c":-0.00282,"n":90,"s":0.92},{"w":"abstract","c":-0.0023,"n":26,"s":0.95},{"w":"high","c":-0.00224,"n":11,"s":1.0},{"w":"parallel","c":-0.00163,"n":15,"s":null},{"w":"long","c":-0.0016,"n":15,"s":0.96},{"w":"pale","c":-0.00159,"n":12,"s":null},{"w":"blue","c":-0.0015,"n":45,"s":null},{"w":"tactile","c":-0.00145,"n":8,"s":null},{"w":"red","c":-0.00134,"n":59,"s":0.99}]},"icon|ADV|Abstraction (geometric)":{"dev":-0.0212,"sig":false,"words":[{"w":"instead","c":-0.00851,"n":3,"s":null},{"w":"entirely","c":-0.00526,"n":3,"s":null},{"w":"close","c":0.00026,"n":6,"s":null},{"w":"simply","c":0.00148,"n":3,"s":null},{"w":"right","c":0.00267,"n":3,"s":0.91},{"w":"nearly","c":0.00619,"n":8,"s":null}]},"icon|icon|Abstraction (non-geometric)":{"dev":0.0105,"sig":false,"words":[{"w":"line","c":0.00279,"n":147,"s":null},{"w":"figure","c":0.00193,"n":11,"s":null},{"w":"drip","c":0.00172,"n":45,"s":null},{"w":"edge","c":0.00121,"n":107,"s":null},{"w":"layer","c":0.00096,"n":38,"s":null},{"w":"thin","c":0.00094,"n":50,"s":null},{"w":"tree","c":0.00092,"n":3,"s":null},{"w":"left","c":0.00087,"n":84,"s":null},{"w":"form","c":0.00077,"n":95,"s":null}]},"icon|NOUN|Abstraction (non-geometric)":{"dev":0.0203,"sig":true,"words":[{"w":"line","c":0.00638,"n":142,"s":null},{"w":"figure","c":0.00314,"n":11,"s":null},{"w":"paint","c":0.003,"n":148,"s":null},{"w":"drip","c":0.00234,"n":29,"s":null},{"w":"edge","c":0.00229,"n":103,"s":null},{"w":"form","c":0.00186,"n":83,"s":null},{"w":"tree","c":0.00174,"n":3,"s":null},{"w":"layer","c":0.00163,"n":26,"s":null},{"w":"patch","c":0.00144,"n":25,"s":null}]},"icon|VERB|Abstraction (non-geometric)":{"dev":0.0054,"sig":false,"words":[{"w":"drip","c":0.00306,"n":16,"s":null},{"w":"sit","c":0.00265,"n":9,"s":null},{"w":"go","c":0.00174,"n":13,"s":null},{"w":"overlap","c":0.00163,"n":17,"s":null},{"w":"surround","c":0.0015,"n":22,"s":null},{"w":"represent","c":0.00135,"n":5,"s":null},{"w":"outline","c":0.00117,"n":9,"s":null},{"w":"fling","c":0.00113,"n":6,"s":null},{"w":"blend","c":0.00111,"n":13,"s":null}]},"icon|ADJ|Abstraction (non-geometric)":{"dev":-0.0072,"sig":false,"words":[{"w":"abstract","c":-0.00537,"n":57,"s":null},{"w":"pink","c":-0.0021,"n":34,"s":null},{"w":"long","c":-0.0017,"n":21,"s":null},{"w":"organic","c":-0.00151,"n":12,"s":null},{"w":"gray","c":-0.00141,"n":23,"s":null},{"w":"different","c":-0.00137,"n":18,"s":null},{"w":"little","c":-0.00125,"n":18,"s":null},{"w":"light","c":-0.00122,"n":16,"s":null},{"w":"high","c":-0.00118,"n":20,"s":null}]},"icon|ADV|Abstraction (non-geometric)":{"dev":-0.0295,"sig":false,"words":[{"w":"generally","c":-0.00837,"n":4,"s":null},{"w":"particularly","c":-0.00664,"n":6,"s":null},{"w":"right","c":-0.0053,"n":10,"s":null},{"w":"well","c":-0.0049,"n":4,"s":null},{"w":"actually","c":-0.00354,"n":4,"s":null},{"w":"probably","c":-0.00231,"n":4,"s":null},{"w":"close","c":-0.00165,"n":5,"s":null},{"w":"perfectly","c":-0.00157,"n":4,"s":null},{"w":"beneath","c":-0.00033,"n":3,"s":null}]}}</script>
+<script>
+(function(){
+  var D = JSON.parse(document.getElementById('worddata').textContent);
+  var pop = document.getElementById('wpop'); var pinned=null, t=null;
+  function esc(s){return String(s).replace(/[&<>]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function render(k){
+    var d=D[k]; if(!d) return false;
+    var p=k.split('|'), col=p[1], mv=p[2], up=d.dev>=0, mx=0;
+    d.words.forEach(function(w){mx=Math.max(mx,Math.abs(w.c));}); mx=mx||1e-9;
+    pop.innerHTML='<h4>'+esc(mv)+' &middot; '+esc(col)+
+      '<span class="pdev">'+(d.dev>=0?'+':'')+d.dev.toFixed(4)+'</span>'+
+      (d.sig?'':'<span class="pns">not significant</span>')+'</h4>'+
+      d.words.map(function(w){
+        var pc=Math.max(6,Math.abs(w.c)/mx*100);
+        var st=(w.s==null)?'':Math.round(w.s*100)+'%';
+        return '<div class="wrow"><span class="wname" title="'+esc(w.w)+' · '+w.n+
+          ' occurrences">'+esc(w.w)+'</span><span class="wbar" style="width:'+pc+
+          '%;background:'+(up?'var(--ok)':'var(--bad)')+'"></span>'+
+          '<span class="wnum">'+(w.c>=0?'+':'')+w.c.toFixed(4)+'</span>'+
+          '<span class="wst">'+st+'</span></div>';}).join('')+
+      '<p class="phint">'+(up?'Words pushing this cell up':'Words pushing this cell down')+
+      ', by share of the fitted deviation. Bars are relative within this cell; the '+
+      'last column is bootstrap sign-stability.</p>';
+    return true;
+  }
+  function place(el){
+    var r=el.getBoundingClientRect();
+    pop.style.visibility='hidden'; pop.classList.add('on');
+    var w=pop.offsetWidth,h=pop.offsetHeight;
+    var x=Math.max(8,Math.min(r.left+r.width/2-w/2,innerWidth-w-8));
+    var y=r.top-h-8; if(y<8) y=r.bottom+8;
+    pop.style.left=x+'px'; pop.style.top=y+'px'; pop.style.visibility='visible';
+  }
+  function show(el){clearTimeout(t); if(!render(el.dataset.k)){hide();return;} place(el);}
+  function hide(){if(pinned)return; pop.classList.remove('on');}
+  document.addEventListener('mouseover',function(e){
+    var c=e.target.closest&&e.target.closest('td[data-k]'); if(c) show(c);});
+  document.addEventListener('mouseout',function(e){
+    var c=e.target.closest&&e.target.closest('td[data-k]');
+    if(c&&!pinned) t=setTimeout(hide,120);});
+  document.addEventListener('focusin',function(e){
+    var c=e.target.closest&&e.target.closest('td[data-k]'); if(c) show(c);});
+  document.addEventListener('click',function(e){
+    var c=e.target.closest&&e.target.closest('td[data-k]');
+    if(c){ if(pinned===c){pinned=null;hide();} else {pinned=null;show(c);pinned=c;}
+      e.preventDefault(); }
+    else if(!e.target.closest('#wpop')){pinned=null;hide();}});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){pinned=null;hide();}});
+  addEventListener('scroll',function(){if(!pinned)hide();},true);
+})();
+</script>
+</body></html>
