@@ -17,8 +17,10 @@ close. The word lists are direction-aware — a cell above the corpus mean shows
 the words pushing it up, one below shows those pushing it down.
 
 `static/` holds matching PNGs for the slide deck; link each image to its page.
-It also holds `iconicity_vs_lexicon.png`, a standalone figure comparing the
-corpus against the Winter iconicity lexicon.
+It also holds two standalone figures:
+`genre_profile.png` — where the corpus sits in the reference lexicons, channel by
+channel — and `iconicity_vs_lexicon.png`, the same comparison for iconicity in
+detail.
 
 ## Method in one paragraph
 
