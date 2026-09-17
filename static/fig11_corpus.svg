@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1281.217688pt" height="544.79235pt" viewBox="0 0 1281.217688 544.79235" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-17T22:49:26.541736</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 544.79235 
+L 1281.217688 544.79235 
+L 1281.217688 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 148.368437 312.499132 
+L 973.920437 312.499132 
+L 973.920437 155.2176 
+L 148.368437 155.2176 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="302.726102" transform="rotate(-0 144.868437 302.726102)">Postimpressionism</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="281.12743" transform="rotate(-0 144.868437 281.12743)">Cubism</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="259.528757" transform="rotate(-0 144.868437 259.528757)">Abstraction (geometric)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="237.930085" transform="rotate(-0 144.868437 237.930085)">Surrealism</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="216.331412" transform="rotate(-0 144.868437 216.331412)">Expressionism</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="194.73274" transform="rotate(-0 144.868437 194.73274)">Abstraction (non-geometric)</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="173.134068" transform="rotate(-0 144.868437 173.134068)">Impressionism</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 148.368437 305.349972 
+L 335.993892 305.349972 
+L 335.993892 291.958795 
+L 148.368437 291.958795 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 148.368437 283.751299 
+L 340.357275 283.751299 
+L 340.357275 270.360122 
+L 148.368437 270.360122 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 148.368437 262.152627 
+L 357.810805 262.152627 
+L 357.810805 248.76145 
+L 148.368437 248.76145 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 148.368437 240.553955 
+L 370.900953 240.553955 
+L 370.900953 227.162778 
+L 148.368437 227.162778 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 148.368437 218.955282 
+L 401.444632 218.955282 
+L 401.444632 205.564105 
+L 148.368437 205.564105 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 148.368437 197.35661 
+L 462.531989 197.35661 
+L 462.531989 183.965433 
+L 148.368437 183.965433 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 148.368437 175.757937 
+L 532.346112 175.757937 
+L 532.346112 162.366761 
+L 148.368437 162.366761 
+z
+" clip-path="url(#p25f51a44b6)" style="fill: #10546b"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="342.102628" y="301.58868" transform="rotate(-0 342.102628 301.58868)">43</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="367.410247" y="301.076743" transform="rotate(-0 367.410247 301.076743)">from 10 painters  ·  16,423 words  ·  median 314</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="346.46601" y="279.990008" transform="rotate(-0 346.46601 279.990008)">44</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="371.77363" y="279.47807" transform="rotate(-0 371.77363 279.47807)">from 18 painters  ·  15,827 words  ·  median 359</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="363.919541" y="258.391335" transform="rotate(-0 363.919541 258.391335)">48</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="389.227161" y="257.879398" transform="rotate(-0 389.227161 257.879398)">from 26 painters  ·  14,891 words  ·  median 288</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="377.009689" y="236.792663" transform="rotate(-0 377.009689 236.792663)">51</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="402.317309" y="236.280725" transform="rotate(-0 402.317309 236.280725)">from 22 painters  ·  20,008 words  ·  median 334</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="407.553368" y="215.193991" transform="rotate(-0 407.553368 215.193991)">58</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="432.860987" y="214.682053" transform="rotate(-0 432.860987 214.682053)">from 27 painters  ·  24,294 words  ·  median 406</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="468.640725" y="193.595318" transform="rotate(-0 468.640725 193.595318)">72</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="493.948344" y="193.083381" transform="rotate(-0 493.948344 193.083381)">from 38 painters  ·  20,688 words  ·  median 207</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 600; font-size: 11.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="538.454848" y="171.996646" transform="rotate(-0 538.454848 171.996646)">88</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9.3px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="563.762467" y="171.484708" transform="rotate(-0 563.762467 171.484708)">from 9 painters  ·  25,091 words  ·  median 230</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 600; font-size: 13px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="148.368437" y="147.2176" transform="rotate(-0 148.368437 147.2176)">Descriptions per movement</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_10">
+    <path d="M 148.368437 489.0096 
+L 523.619347 489.0096 
+L 523.619347 387.537644 
+L 148.368437 387.537644 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_8">
+     <g id="line2d_8"/>
+     <g id="text_23">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="399.070638" transform="rotate(-0 144.868437 399.070638)">Claude Monet</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_9"/>
+     <g id="text_24">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="409.722743" transform="rotate(-0 144.868437 409.722743)">Pablo Picasso</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_10"/>
+     <g id="text_25">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="420.374849" transform="rotate(-0 144.868437 420.374849)">Paul Cézanne</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_11"/>
+     <g id="text_26">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="431.026954" transform="rotate(-0 144.868437 431.026954)">Edvard Munch</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_12"/>
+     <g id="text_27">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="441.679059" transform="rotate(-0 144.868437 441.679059)">Vincent van Gogh</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_13"/>
+     <g id="text_28">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="452.331165" transform="rotate(-0 144.868437 452.331165)">Paul Gauguin</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_14"/>
+     <g id="text_29">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="462.98327" transform="rotate(-0 144.868437 462.98327)">Jackson Pollock</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_15"/>
+     <g id="text_30">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="473.635376" transform="rotate(-0 144.868437 473.635376)">Mark Rothko</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_16"/>
+     <g id="text_31">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="144.868437" y="484.287481" transform="rotate(-0 144.868437 484.287481)">the other 116 painters</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_11">
+    <path d="M 148.368437 399.180395 
+L 201.146343 399.180395 
+L 201.146343 392.150005 
+L 148.368437 392.150005 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 148.368437 409.8325 
+L 187.323558 409.8325 
+L 187.323558 402.802111 
+L 148.368437 402.802111 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 148.368437 420.484606 
+L 179.783858 420.484606 
+L 179.783858 413.454216 
+L 148.368437 413.454216 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 148.368437 431.136711 
+L 172.244157 431.136711 
+L 172.244157 424.106322 
+L 148.368437 424.106322 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 148.368437 441.788817 
+L 164.704456 441.788817 
+L 164.704456 434.758427 
+L 148.368437 434.758427 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 148.368437 452.440922 
+L 164.704456 452.440922 
+L 164.704456 445.410533 
+L 148.368437 445.410533 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 148.368437 463.093028 
+L 163.447839 463.093028 
+L 163.447839 456.062638 
+L 148.368437 456.062638 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 148.368437 473.745133 
+L 163.447839 473.745133 
+L 163.447839 466.714743 
+L 148.368437 466.714743 
+z
+" clip-path="url(#pf781829740)" style="fill: #eba000"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 148.368437 484.397238 
+L 446.186619 484.397238 
+L 446.186619 477.366849 
+L 148.368437 477.366849 
+z
+" clip-path="url(#pf781829740)" style="fill: #dde2e6"/>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="202.654283" y="398.012638" transform="rotate(-0 202.654283 398.012638)">42</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="188.831498" y="408.664743" transform="rotate(-0 188.831498 408.664743)">31</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="181.291798" y="419.316849" transform="rotate(-0 181.291798 419.316849)">25</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="173.752097" y="429.968954" transform="rotate(-0 173.752097 429.968954)">19</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="166.212396" y="440.621059" transform="rotate(-0 166.212396 440.621059)">13</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="166.212396" y="451.273165" transform="rotate(-0 166.212396 451.273165)">13</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="164.955779" y="461.92527" transform="rotate(-0 164.955779 461.92527)">12</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="164.955779" y="472.577376" transform="rotate(-0 164.955779 472.577376)">12</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="447.694559" y="483.229481" transform="rotate(-0 447.694559 483.229481)">237</text>
+   </g>
+   <g id="text_41">
+    <text style="font-weight: 600; font-size: 12px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="148.368437" y="380.537644" transform="rotate(-0 148.368437 380.537644)">69 of 124 painters appear once</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_20">
+    <path d="M 598.669528 489.0096 
+L 973.920437 489.0096 
+L 973.920437 387.537644 
+L 598.669528 387.537644 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_17">
+     <g id="line2d_17"/>
+     <g id="text_42">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="595.169528" y="400.98269" transform="rotate(-0 595.169528 400.98269)">National Gallery of Art, Washing…</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_18"/>
+     <g id="text_43">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="595.169528" y="417.231913" transform="rotate(-0 595.169528 417.231913)">Peggy Guggenheim Collection</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_19"/>
+     <g id="text_44">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="595.169528" y="433.530011" transform="rotate(-0 595.169528 433.530011)">Anderson Collection at Stanford …</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_20"/>
+     <g id="text_45">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="595.169528" y="449.828108" transform="rotate(-0 595.169528 449.828108)">Museum of Modern Art, New York</text>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_21"/>
+     <g id="text_46">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="595.169528" y="466.126206" transform="rotate(-0 595.169528 466.126206)">Berlinische Galerie</text>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_22"/>
+     <g id="text_47">
+      <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: end; fill: #0a0a0a" x="595.169528" y="482.424304" transform="rotate(-0 595.169528 482.424304)">the other 30 institutions</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_21">
+    <path d="M 598.669528 402.90675 
+L 911.378619 402.90675 
+L 911.378619 392.150005 
+L 598.669528 392.150005 
+z
+" clip-path="url(#p89a22480b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 598.669528 419.204848 
+L 694.88771 419.204848 
+L 694.88771 408.448103 
+L 598.669528 408.448103 
+z
+" clip-path="url(#p89a22480b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 598.669528 435.502945 
+L 660.810437 435.502945 
+L 660.810437 424.746201 
+L 598.669528 424.746201 
+z
+" clip-path="url(#p89a22480b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 598.669528 451.801043 
+L 636.755892 451.801043 
+L 636.755892 441.044298 
+L 598.669528 441.044298 
+z
+" clip-path="url(#p89a22480b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 598.669528 468.099141 
+L 630.742256 468.099141 
+L 630.742256 457.342396 
+L 598.669528 457.342396 
+z
+" clip-path="url(#p89a22480b6)" style="fill: #10546b"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 598.669528 484.397238 
+L 867.278619 484.397238 
+L 867.278619 473.640494 
+L 598.669528 473.640494 
+z
+" clip-path="url(#p89a22480b6)" style="fill: #dde2e6"/>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="915.38771" y="399.875815" transform="rotate(-0 915.38771 399.875815)">156</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="698.896801" y="416.173913" transform="rotate(-0 698.896801 416.173913)">48</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="664.819528" y="432.472011" transform="rotate(-0 664.819528 432.472011)">31</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="640.764983" y="448.770108" transform="rotate(-0 640.764983 448.770108)">19</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="634.751347" y="465.068206" transform="rotate(-0 634.751347 465.068206)">16</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 9.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="871.28771" y="481.366304" transform="rotate(-0 871.28771 481.366304)">134</text>
+   </g>
+   <g id="text_54">
+    <text style="font-weight: 600; font-size: 12px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="598.669528" y="380.537644" transform="rotate(-0 598.669528 380.537644)">one institution supplies 39% of the corpus</text>
+   </g>
+  </g>
+  <g id="patch_27">
+   <path d="M 148.368437 12.3984 
+L 204.614837 12.3984 
+L 204.614837 7.2 
+L 148.368437 7.2 
+z
+" style="fill: #eba000; stroke: #eba000; stroke-linejoin: miter"/>
+  </g>
+  <g id="text_55">
+   <text style="font-weight: 600; font-size: 29px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="148.368437" y="91.481131" transform="rotate(-0 148.368437 91.481131)">404</text>
+  </g>
+  <g id="text_56">
+   <text style="font-size: 8.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="148.368437" y="110.797881" transform="rotate(-0 148.368437 110.797881)">D E S C R I P T I O N S</text>
+  </g>
+  <g id="text_57">
+   <text style="font-weight: 600; font-size: 29px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="318.014837" y="91.481131" transform="rotate(-0 318.014837 91.481131)">137,222</text>
+  </g>
+  <g id="text_58">
+   <text style="font-size: 8.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="318.014837" y="110.797881" transform="rotate(-0 318.014837 110.797881)">R U N N I N G   W O R D S</text>
+  </g>
+  <g id="text_59">
+   <text style="font-weight: 600; font-size: 29px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="487.661237" y="91.481131" transform="rotate(-0 487.661237 91.481131)">7</text>
+  </g>
+  <g id="text_60">
+   <text style="font-size: 8.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="487.661237" y="110.797881" transform="rotate(-0 487.661237 110.797881)">M O V E M E N T S</text>
+  </g>
+  <g id="text_61">
+   <text style="font-weight: 600; font-size: 29px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="657.307637" y="91.481131" transform="rotate(-0 657.307637 91.481131)">124</text>
+  </g>
+  <g id="text_62">
+   <text style="font-size: 8.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="657.307637" y="110.797881" transform="rotate(-0 657.307637 110.797881)">P A I N T E R S</text>
+  </g>
+  <g id="text_63">
+   <text style="font-weight: 600; font-size: 29px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="826.954038" y="91.481131" transform="rotate(-0 826.954038 91.481131)">35</text>
+  </g>
+  <g id="text_64">
+   <text style="font-size: 8.2px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="826.954038" y="110.797881" transform="rotate(-0 826.954038 110.797881)">I N S T I T U T I O N S</text>
+  </g>
+  <g id="text_65">
+   <text style="font-weight: 600; font-size: 19px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #0a0a0a" x="148.368437" y="29.3616" transform="rotate(-0 148.368437 29.3616)">A corpus of museum audio description</text>
+  </g>
+  <g id="text_66">
+   <text style="font-size: 10.5px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="148.368437" y="45.7776" transform="rotate(-0 148.368437 45.7776)">English-language descriptions of paintings, 1817–2024, collected from museum audio guides and accessibility programmes.</text>
+  </g>
+  <g id="text_67">
+   <text style="font-size: 8.8px; font-family: 'Segoe UI', 'DejaVu Sans'; text-anchor: start; fill: #5c6470" x="148.368437" y="535.5216" transform="rotate(-0 148.368437 535.5216)">Movement, painter and institution are deeply confounded by the way the material exists: Impressionism’s 88 descriptions come from 9 painters, non-geometric Abstraction’s 72 from 38. Movement effects are therefore estimated with crossed random intercepts for text, painter and institution.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p25f51a44b6">
+   <rect x="148.368437" y="155.2176" width="825.552" height="157.281532"/>
+  </clipPath>
+  <clipPath id="pf781829740">
+   <rect x="148.368437" y="387.537644" width="375.250909" height="101.471956"/>
+  </clipPath>
+  <clipPath id="p89a22480b6">
+   <rect x="598.669528" y="387.537644" width="375.250909" height="101.471956"/>
+  </clipPath>
+ </defs>
+</svg>
